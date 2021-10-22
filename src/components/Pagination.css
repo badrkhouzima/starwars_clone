@@ -1,0 +1,12 @@
+ul.pagination {
+  display: table;
+  margin: 0 auto;
+}
+
+.page-item {
+    list-style: none;
+    display: inline;
+    margin: 0 4px;
+    
+    align-items: center;
+}

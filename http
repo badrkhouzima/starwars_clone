@@ -1,0 +1,34 @@
+== Info:   Trying 18.197.142.196...
+== Info: TCP_NODELAY set
+== Info: Connected to swapi.dev (18.197.142.196) port 80 (#0)
+=> Send header, 87 bytes (0x57)
+0000: GET /api/planets/1/ HTTP/1.1
+001e: Host: swapi.dev
+002f: User-Agent: curl/7.54.0
+0048: Accept: */*
+0055: 
+<= Recv header, 32 bytes (0x20)
+0000: HTTP/1.1 301 Moved Permanently
+<= Recv header, 22 bytes (0x16)
+0000: Server: nginx/1.16.1
+<= Recv header, 37 bytes (0x25)
+0000: Date: Tue, 05 Oct 2021 10:39:40 GMT
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/html
+<= Recv header, 21 bytes (0x15)
+0000: Content-Length: 169
+<= Recv header, 24 bytes (0x18)
+0000: Connection: keep-alive
+<= Recv header, 44 bytes (0x2c)
+0000: Location: https://swapi.dev/api/planets/1/
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 169 bytes (0xa9)
+0000: <html>
+0008: <head><title>301 Moved Permanently</title></head>
+003b: <body>
+0043: <center><h1>301 Moved Permanently</h1></center>
+0074: <hr><center>nginx/1.16.1</center>
+0097: </body>
+00a0: </html>
+== Info: Connection #0 to host swapi.dev left intact

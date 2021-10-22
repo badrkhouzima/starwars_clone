@@ -1,0 +1,52 @@
+12:41:53.162170 == Info: Rebuilt URL to: http://bbc.com/
+12:41:53.233030 == Info:   Trying 151.101.0.81...
+12:41:53.233071 == Info: TCP_NODELAY set
+12:41:53.246366 == Info: Connected to bbc.com (151.101.0.81) port 80 (#0)
+12:41:53.246488 => Send header, 71 bytes (0x47)
+0000: GET / HTTP/1.1
+0010: Host: bbc.com
+001f: User-Agent: curl/7.54.0
+0038: Accept: */*
+0045: 
+12:41:53.262183 <= Recv header, 32 bytes (0x20)
+0000: HTTP/1.1 301 Moved Permanently
+12:41:53.262244 <= Recv header, 17 bytes (0x11)
+0000: Server: Varnish
+12:41:53.262272 <= Recv header, 16 bytes (0x10)
+0000: Retry-After: 0
+12:41:53.262297 <= Recv header, 19 bytes (0x13)
+0000: Content-Length: 0
+12:41:53.262322 <= Recv header, 22 bytes (0x16)
+0000: Accept-Ranges: bytes
+12:41:53.262347 <= Recv header, 37 bytes (0x25)
+0000: Date: Tue, 05 Oct 2021 10:41:54 GMT
+12:41:53.262375 <= Recv header, 18 bytes (0x12)
+0000: Via: 1.1 varnish
+12:41:53.262401 <= Recv header, 19 bytes (0x13)
+0000: Connection: close
+12:41:53.262429 <= Recv header, 33 bytes (0x21)
+0000: X-Served-By: cache-mad22057-MAD
+12:41:53.262462 <= Recv header, 15 bytes (0xf)
+0000: X-Cache: MISS
+12:41:53.262486 <= Recv header, 17 bytes (0x11)
+0000: X-Cache-Hits: 0
+12:41:53.262511 <= Recv header, 37 bytes (0x25)
+0000: X-Timer: S1633430514.472865,VS0,VE0
+12:41:53.262539 <= Recv header, 99 bytes (0x63)
+0000: nel: {'report_to':'default','max_age': 2592000,'include_subdomai
+0040: ns':true,'failure_fraction':0.05}
+12:41:53.262580 <= Recv header, 201 bytes (0xc9)
+0000: report-to: {'group':'default','max_age':2592000,'endpoints':[ {'
+0040: url':'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfu
+0080: nctions.net/report-endpoint','priority':1} ],'include_subdomains
+00c0: ':true}
+12:41:53.262644 <= Recv header, 23 bytes (0x17)
+0000: req-svc-chain: FASTLY
+12:41:53.262672 <= Recv header, 28 bytes (0x1c)
+0000: Location: https://bbc.com/
+12:41:53.262699 <= Recv header, 86 bytes (0x56)
+0000: Cache-Control: public,max-age=604800,stale-while-revalidate=3600
+0040: ,stale-if-error=3600
+12:41:53.262738 <= Recv header, 2 bytes (0x2)
+0000: 
+12:41:53.262781 == Info: Closing connection 0

@@ -1,0 +1,62 @@
+.slider_container h5{
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 0 1px;
+    
+    color: #fff;
+}
+
+.slider_container {
+      /* background-color: aqua; */
+      background-image: url("../assets/img_2/nav_background.png");
+      background-size: cover;
+      padding-bottom: 100px;
+}
+.slider_Imgs {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 10px;
+    
+}
+.slider_Imgs img{
+    width:1200px;
+    height: 800px;
+    padding-bottom: 10px;
+}
+.slide_button {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* margin-left: auto;
+    margin-right: auto;
+    width:200; */
+    margin:auto;
+    width: 80%;
+    /* align-items: center; */
+    text-align: center;
+}
+.slide_button button .anticon {
+    /* outline: none; */
+    /* border: none; */
+    font-size: 22px;
+     /* height: 30px;
+     line-height: 15px; */
+    background: none;
+    padding: 5px 10px;
+    margin: 5px; 
+    vertical-align: middle;
+   
+    /* align-items: center; */
+}
+.slide_button button{
+    margin-left: 0 20px;
+    padding: 0 20px;
+   
+}
