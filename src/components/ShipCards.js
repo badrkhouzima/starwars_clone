@@ -6,32 +6,24 @@ import Pagination from "./Pagination";
 import CircularProgress from "@mui/material/CircularProgress";
 //import { useLocation } from "react-router-dom";
 
-const ShipCards = () => {
+const ShipCards = ({ pageNum, setPageNum }) => {
   const [starships, setStarships] = useState(null);
   const [loading, setLoading] = useState(false);
-  //const [imageIndex, setImageIndex] = useState(pageNum);
-  // const location = useLocation();
-  //  const { fromPage } = location.state;
-  const [pageNum, setPageNum] = useState(1);
-  //get current ships
-
+  //const [pageNum, setPageNum] = useState(1);
   useEffect(() => {
     const getResults = async () => {
       setLoading(true);
       const result = await axios.get(
-        `https://swapi.dev/api/starships/?page= ${pageNum}
-      `
+        `https://swapi.dev/api/starships/?page=${pageNum}`
       );
       setStarships(result.data.results);
       setLoading(false);
     };
     getResults();
   }, [pageNum]);
-
   if (loading) {
     return (
-      <div style={{textAlign:"center"}}>
-        
+      <div style={{ textAlign: "center" }}>
         <CircularProgress color="secondary" />
         <CircularProgress color="success" />
         <CircularProgress color="inherit" />
@@ -67,7 +59,6 @@ const ShipCards = () => {
                   >
                     <div className="card">
                       <p>{starship.name}</p> <p>{starship.model}</p>
-                      {console.log("this is one =>", index + pageNum)}
                     </div>
                   </Link>
                 );

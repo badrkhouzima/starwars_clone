@@ -1,14 +1,30 @@
-.content_div {
+
+.film_names,
+ul li {
+    /* background-color: #0a0b0b; */
+    color: #fff;
+    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+
+    /* padding: 3px 150px; */
+}
+.film_names {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 100vw;
-    padding-top: 100px;
-    text-align: center;
 }
 
+.film_names ul li {
+    list-style: none;
+    text-align: left;
+    
+}
+
+
+/* @import "compass/reset"; */
 .stars,
 .twinkling,
 .clouds {
@@ -25,6 +41,7 @@
 .stars {
     z-index: 0;
     background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+     
 }
 
 .twinkling {

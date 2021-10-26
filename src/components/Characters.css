@@ -1,14 +1,41 @@
-.content_div {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    height: 100vh;
-    width: 100vw;
-    padding-top: 100px;
-    text-align: center;
+.characterName,
+ul li {
+    /* background-color: #0a0b0b; */
+    color: #fff;
+    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    
+    /* padding: 3px 150px; */
 }
 
+
+.characterName ul li {
+    list-style: none;
+    text-align: left;
+}
+.characterName ul{
+    /* display: flex;
+    padding: 0 0 5px 0;
+    position: relative; */
+
+        /* list-style-position: inside; */
+    
+}
+.card {
+    background-color: #222;
+    /* position: relative;
+    left: 0; */
+    /* color: #fff; */
+    /* margin: 30px 20px;
+    padding: 30px 40px; */
+    /* text-align: center; */
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 70%; */
+}
+
+/* @import "compass/reset"; */
 .stars,
 .twinkling,
 .clouds {

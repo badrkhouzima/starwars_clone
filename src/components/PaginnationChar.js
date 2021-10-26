@@ -1,18 +1,18 @@
 import React from "react";
-import "./Pagination.css";
+import "./PaginationChar.css";
 import { Link } from "react-router-dom";
 
-const Pagination = ({ setPageNum,  }) => {
-  const shipPages = [];
-  for (let i = 1; i < 5; i++) {
-    shipPages.push(i);
+const PaginationChar = ({ setPageNum }) => {
+  const charPages = [];
+  for (let i = 1; i < 10; i++) {
+    charPages.push(i);
   }
 
   return (
     <div>
       <ul className="pagination">
-        {shipPages.map((pageNumber, index) => (
-          <Link to="/shipcards" key={index}>
+        {charPages.map((pageNumber, index) => (
+          <Link to="/characters" key={index}>
             <li
               className="page-item"
               onClick={() => {
@@ -27,4 +27,4 @@ const Pagination = ({ setPageNum,  }) => {
     </div>
   );
 };
-export default Pagination;
+export default PaginationChar;

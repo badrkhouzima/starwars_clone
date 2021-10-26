@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ImageSlider.css"
-import HomeBody from "./HomeBody"
+
 
 import image1 from "../assets/img_2/image1_fighters.jpg";
 import image2 from "../assets/img_2/image2_tunnel.webp";
@@ -79,7 +79,7 @@ const ImageSlider = () => {
           </div>
         </div>
       </div>
-      <div><HomeBody/></div>
+     
     </>
   );
 };

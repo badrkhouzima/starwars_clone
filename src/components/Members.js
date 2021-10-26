@@ -1,25 +1,19 @@
 import React from "react";
-import "./Home.css"
+import "./Members.css";
 import styled from "styled-components";
 
-export default function Home() {
+const Members=()=> {
   return (
     <div className="stars">
       <div className="twinkling">
         <div className="clouds">
           <div className="content_div">
             <Title>
-              In this little web page we publish some essential information
-              about star wars movies
+              Welcome to Star Wars members' space
             </Title>
 
             <ParaphHome>
-              Star Wars is a multi-genre mythology and multimedia franchise
-              created by George Lucas in 1976. Comprising movies, novels,
-              comics, video games, toys, and numerous television series, the
-              Star Wars franchise employs archetypal motifs common to religions,
-              classical mythology, and political climax, as well as musical
-              motifs of those same aspects.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nihil maxime rem omnis eveniet, eos nobis temporibus similique eum molestias facere. Repellendus totam temporibus, odit inventore in voluptatem sequi sed.
             </ParaphHome>
           </div>
         </div>
@@ -27,17 +21,20 @@ export default function Home() {
     </div>
   );
 }
+export default Members;
+
 const Title = styled.h1`
   color: #fff;
   text-align: center;
 `;
 
 const ParaphHome = styled.p`
-  
   color: white;
- 
+
   font-family: "Lato", sans-serif, Arial, Helvetica, sans-serif;
   font-size: 23px;
   font-weight: 300;
   padding: 3px 150px;
 `;
+
+

@@ -38,3 +38,32 @@ ul.Ship_Info {
      -moz-column-fill: auto;
      column-fill: auto;
 }
+/* .Ship_Info{
+    background-color: #303030;
+} */
+.pilots_films_cards{
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    /* width: 100vw; */
+}
+
+.relatedPilots_names{
+  background-color: #303030;
+  color: #fff;
+  width: 100%;
+}
+.relatedFilms_names{
+  background-color: #303030;
+  color: #fff;
+  width: 100%;
+}
+
+.relatedfilms_names ul li{
+    color: #fff;
+}
+
+.relatedPilots_names,
+.relatedfilms_names h3 {
+    padding: 5px 80px 120px;
+}

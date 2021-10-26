@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import logo from "../assets/img_2/logo.png";
+import { useHistory } from "react-router-dom";
 import "./LogIn.css";
-
-const LogIn = ({ setAuth, setShowLogIn }) => {
+//import Members from "./Members";
+const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
   const [email, setEmail] = useState("");
   const [passWordValue, setPassWordValue] = useState("");
   const [showErrorEmail, setShowErrorEmail] = useState("");
   const [showErrorPassWord] = useState("");
-
+  const history = useHistory();
   const handleLogin = (data) => {
     data.preventDefault();
     //check if the email is valid
@@ -30,24 +31,23 @@ const LogIn = ({ setAuth, setShowLogIn }) => {
       return re.test(email);
     };
     const isRequired = (value) => (value === "" ? false : true);
-
     const isThisEmailValid = checkEmail();
     // if email is valid we check if email and pssword match we it s storaged in local storage
     if (isThisEmailValid) {
       const dataX = JSON.parse(localStorage.getItem("signups"));
       const getArray = dataX.filter(
-        (ele) =>
-          ele["pass-word"].passWord === passWordValue && ele["e-mail"] === email
+        (ele) => ele["pass-word"] === passWordValue && ele["e-mail"] === email
       );
       // if password and email match we will get one object in our array the we unlock the auth and the logging dissapear
       if (isThisEmailValid && getArray.length === 1) {
         console.log("success");
         setAuth(true);
         setShowLogIn(false);
+        setShowLogOut(true);
+        setShowUpandIn(false);
+        history.push("/members");
       }
     }
-
-    console.log("failed ....");
   };
 
   return (
@@ -82,7 +82,6 @@ const LogIn = ({ setAuth, setShowLogIn }) => {
             <dir>{showErrorPassWord}</dir>
           </div>
         </div>
-
         <button>Log In</button>
         <p>Already have an account? Sign In</p>
       </form>
@@ -91,6 +90,6 @@ const LogIn = ({ setAuth, setShowLogIn }) => {
 };
 export default LogIn;
 
-// &&
-//       email in localStorage &&
-//       passWordValue in localStorage
+//&&
+//email in localStorage &&
+//passWordValue in localStorage
