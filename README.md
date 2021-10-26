@@ -12,7 +12,7 @@ It's a web page offering the users information about star wars movies. Specifica
 ```http
   https://swapi.dev/api/
 ```
-
+We used axios to fetch data
 API for images coming soon and extra info coming soon
 
   
@@ -63,6 +63,10 @@ Install dependencies
 
 ```bash
   npm install
+```
+```bash
+  npm install axios 
+  intalling the library to fetch data
 ```
 
 Start the server
