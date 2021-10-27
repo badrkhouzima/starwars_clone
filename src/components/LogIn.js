@@ -51,7 +51,7 @@ const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
   };
 
   return (
-    <div className="signup_container">
+    <div className="signIn_container">
       <form onSubmit={handleLogin}>
         <img
           style={{ width: " 100px", height: "60px", padding: "10px" }}
@@ -59,7 +59,7 @@ const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
           alt=""
         />
         <h1>SIGN IN</h1>
-        <div className="signUp_inputs">
+        <div className="signIn_inputs">
           <dir>
             <input
               label="Email"

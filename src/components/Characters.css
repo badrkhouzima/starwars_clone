@@ -52,6 +52,7 @@ ul li {
 .stars {
     z-index: 0;
     background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+    padding-top: 30px;
 }
 
 .twinkling {

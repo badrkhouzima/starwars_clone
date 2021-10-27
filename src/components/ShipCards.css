@@ -5,22 +5,29 @@
     font-size: 23px;
     font-weight: 300;
     padding: 3px 150px;
+     
+ 
 }
 
 .starShipName p {
     /* color: rgb(177, 89, 23); */
     font-size: 30px;
     /* font-family: Arial, Helvetica, sans-serif; */
+    
 }
+
 
 .card {
     background-color: #222222;
-    margin: 30px 20px;
+    margin: 10px 20px 30px;
     padding: 30px 40px;
     text-align: center;
-    /* margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
-    width: 70%; */
+    width: 70%;
+}
+.starShipName {
+    padding-top: 10px;
 }
 /* @import "compass/reset"; */
 .stars,
@@ -39,6 +46,7 @@
 .stars {
     z-index: 0;
     background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+     padding-top: 30px;
 }
 
 .twinkling {
