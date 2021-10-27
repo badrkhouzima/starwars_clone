@@ -53,6 +53,7 @@ const App = () => {
           setShowLogIn={setShowLogIn}
           setShowUpandIn={setShowUpandIn}
           setShowLogOut={setShowLogOut}
+          setShowIntro={setShowIntro}
         />
       )}
       {/* {showLogOut && <LogOut setShowLogOut={setShowLogOut} />} */}

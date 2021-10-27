@@ -3,7 +3,13 @@ import logo from "../assets/img_2/logo.png";
 import { useHistory } from "react-router-dom";
 import "./LogIn.css";
 //import Members from "./Members";
-const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
+const LogIn = ({
+  setAuth,
+  setShowLogIn,
+  setShowLogOut,
+  setShowUpandIn,
+  setShowIntro,
+}) => {
   const [email, setEmail] = useState("");
   const [passWordValue, setPassWordValue] = useState("");
   const [showErrorEmail, setShowErrorEmail] = useState("");
@@ -45,6 +51,7 @@ const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
         setShowLogIn(false);
         setShowLogOut(true);
         setShowUpandIn(false);
+        setShowIntro(false);
         history.push("/members");
       }
     }
@@ -52,25 +59,33 @@ const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
 
   return (
     <div className="signIn_container">
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} className="login_form">
         <img
-          style={{ width: " 100px", height: "60px", padding: "10px" }}
+          style={{
+            width: " 110px",
+            height: "90px",
+            padding: "10px",
+            clor: "#edd700",
+          }}
           src={logo}
           alt=""
         />
-        <h1>SIGN IN</h1>
-        <div className="signIn_inputs">
-          <dir>
+        <div className="signIn_card">
+          <h1>SIGN IN</h1>
+
+          <div>
             <input
               label="Email"
               name="email"
               value={email}
               type="email"
-              placeholder="email"
+              placeholder="Email Address"
               onChange={(e) => setEmail(e.target.value)}
+              className="form-control"
+              required
             />
-            <dir>{showErrorEmail}</dir>
-          </dir>
+            <label>{showErrorEmail}</label>
+          </div>
           <div>
             <input
               label="Password"
@@ -78,12 +93,15 @@ const LogIn = ({ setAuth, setShowLogIn, setShowLogOut, setShowUpandIn }) => {
               type="password"
               placeholder="Password"
               onChange={(e) => setPassWordValue(e.target.value)}
+              className="form-control"
+              required
             />
-            <dir>{showErrorPassWord}</dir>
+            <div>{showErrorPassWord}</div>
           </div>
+
+          <button>Sign in</button>
         </div>
-        <button>Log In</button>
-        <p>Already have an account? Sign In</p>
+        <p>Create an Account</p>
       </form>
     </div>
   );
